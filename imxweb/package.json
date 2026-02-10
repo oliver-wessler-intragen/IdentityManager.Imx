@@ -25,7 +25,9 @@
     "doc:qer": "cd projects/qer && compodoc -p tsconfig.lib.json",
     "doc:qer-opssupport": "cd projects/qer-app-operationssupport && compodoc -p tsconfig.app.json",
     "doc:qer-portal": "cd projects/qer-app-portal && compodoc -p tsconfig.app.json",
-    "postinstall": "node remove-local-package-locks.js"
+    "postinstall": "node remove-local-package-locks.js",
+    "buildall": "ng build qbm && ng build qer && ng build tsb && ng build att && ng build rms && ng build aad && ng build aob && ng build uci && ng build cpl && ng build dpr && ng build rmb && ng build rps && ng build o3t && ng build olg && ng build hds && ng build pol && ng build qer-app-portal && ng build qbm-app-landingpage && ng build qer-app-operationssupport && ng build qer-app-pwdportal && ng build custom-app",
+    "buildalldeployable": "npm run build:lib qbm && npm run build:lib qer && npm run build:lib tsb && npm run build:lib att && npm run build:lib rms && npm run build:lib aad && npm run build:lib aob && npm run build:lib uci && npm run build:lib cpl && npm run build:lib dpr && npm run build:lib rmb && npm run build:lib rps && npm run build:lib o3t && npm run build:lib olg && npm run build:lib hds && npm run build:lib pol && npm run build:app qbm-app-landingpage && npm run build:app qer-app-operationssupport && npm run build:app qer-app-portal && npm run build:app qer-app-pwdportal"
   },
   "private": true,
   "dependencies": {
@@ -58,6 +60,7 @@
     "file-saver": "^2.0.2",
     "moment-timezone": "^0.5.38",
     "ngx-logger": "^4.1.2",
+    "npm": "^11.9.0",
     "rxjs": "~6.5.4",
     "smooth-scrollbar": "^8.5.1",
     "swagger-ui-dist": "~4.12.0",
@@ -125,7 +128,6 @@
     "imx-api-uci": "file:imx-modules/imx-api-uci.tgz",
     "imx-qbm-dbts": "file:imx-modules/imx-qbm-dbts.tgz"
   },
-
   "overrides": {
     "postcss": "8.4.31",
     "tough-cookie": "4.1.3",
