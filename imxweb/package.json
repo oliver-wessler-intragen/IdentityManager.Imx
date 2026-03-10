@@ -25,7 +25,8 @@
     "doc:qer": "cd projects/qer && compodoc -p tsconfig.lib.json",
     "doc:qer-opssupport": "cd projects/qer-app-operationssupport && compodoc -p tsconfig.app.json",
     "doc:qer-portal": "cd projects/qer-app-portal && compodoc -p tsconfig.app.json",
-    "postinstall": "node remove-local-package-locks.js"
+    "postinstall": "node remove-local-package-locks.js",
+    "buildallmodules": "ng build aad && ng build aob && ng build apc && ng build att && ng build cpl && ng build dpr && ng build hds && ng build o3t && ng build olg && ng build pol && ng build qbm && ng build qer && ng build rmb && ng build rms && ng build rps && ng build sac && ng build tsb && ng build uci"
   },
   "private": true,
   "dependencies": {
